@@ -13,7 +13,7 @@ import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_cliente")
+@Table(name = "tb_client")
 public class Client implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -110,7 +110,7 @@ public class Client implements Serializable {
 
 	@PreUpdate
 	public void preUpdate() {
-		this.createdAt = Instant.now();
+		this.updatedAt = Instant.now();
 	}
 
 	@Override
